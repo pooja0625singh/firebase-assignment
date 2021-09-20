@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Add Blog</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+	<script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-database.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-storage.js"></script>
+
+	<script src="blogHomePage.js"></script>
+
+	<style type="text/css">
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background-color: #333;
+			position: -webkit-sticky; /* Safari */
+			position: sticky;
+			top: 0;
+		}
+
+		li {
+			float: left;
+		}
+
+		li a {
+			display: block;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+		}
+
+		li a:hover {
+			background-color: #111;
+		}
+
+		input[type=text] {
+			float: right;
+			padding: 6px;
+			margin-top: 8px;
+			margin-right: 16px;
+			border: none;
+			font-size: 17px;
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		label {
+			padding: 12px 12px 12px 0;
+			display: inline-block;
+		}
+
+		.container {
+			border-radius: 5px;
+			background-color: #f2f2f2;
+			padding: 20px;
+			margin: 10px;
+		}
+
+	</style>
+</head>
+<body>
+<script src="addBlog.js"></script>
+<ul>
+  <li><a class="active" href="blogHomePage">Home</a></li>
+  <li><a href="myBlog.html">My Blogs</a></li>
+  <li><a href="blogHomePage.html">All Blogs</a></li>
+  <li><a href="addBlog.html">Add Blog</a></li>
+  <input type="text" placeholder="Search..">
+
+  <li><button onclick="logOut()"><a href="loginForm.html"> LogOut</a></button></li>
+</ul>
+
+<div class=container">
+	<form id="post-form">
+		<h1 style="text-align: center;">Write a Blog</h1>  
+		<label>Title of the Blog</label>
+		<input type="text" placeholder="Enter Title"  class="form-control" id="title">
+		<br>
+		<label>Blog</label>
+		<textarea id="post" class="form-control">  </textarea>
+		<br>
+		<input type="file" class="form-control" id="image" accept="images/*" >
+		<div class="text-center"> 
+		<div id="message"></div>
+		<br>
+		<button type="button" id="upload" class="btn btn-success"  style="background-color:#222"onclick="uploadBlog()">  Upload  </button> 
+	    </div> 
+	</form>
+</div>
+</body>
+</html>

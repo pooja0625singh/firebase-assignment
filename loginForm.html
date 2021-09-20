@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title> Login Form </title>
+
+<script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-storage.js"></script>
+
+<script src="loginForm.js"></script>
+
+
+<style>
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+
+input[type=email], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/*form {
+	border:3px solid #f1f1f1;
+}
+*/
+.container1 {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+
+.container2 {
+  padding: 16px;
+}
+
+</style>
+</head>
+
+<body>
+
+  
+<form action="/action_page.php" method="post">
+<div class="container1">
+  <h1 style="color: purple"> Welcome to BlogStrom!!! </h1>
+  <h2> Login </h2>
+</div>
+ 
+<div class="container2">
+  <label for="email"><b>Email</b></label>
+  <input type="email" placeholder="Enter Email" name="email" required>
+
+  <label for="psw"><b>Password</b></label>
+  <input type="password" placeholder="Enter Password" name="psw" required>
+    
+  <button type="submit" id="btnSignIn" style="color: black"><b>SignIn</b></button>
+  <br>
+  <br>
+  <button type="submit" id="btnGoogleSignIn" style="color: black"><b>SignIn with Google</b></button>
+  <button type="submit" id="btnFacebookSignIn" style="color: black"><b>SignIn with Facebook</b></button>
+
+  
+  <h2> Don't have an account!!! SignUp... </h2>
+  <button type="submit" id="btnSignUp" style="color: black"><a href="signupForm.html"><b>SignUp</b></a></button> 
+</div>
+
+
+</form>
+
+</body>
+</html>
+
